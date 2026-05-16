@@ -1,0 +1,70 @@
+import React from 'react';
+import { Share2, Mail, Phone, MapPin } from 'lucide-react';
+import './Footer.css';
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <h2 className="logo">Safe Way <span className="gold-text">Journey</span></h2>
+            <p className="footer-desc">
+              Your trusted partner for spiritual pilgrimages and tours in Sri Lanka. 
+              We bring you closer to the sacred heritage of our motherland.
+            </p>
+            <div className="social-links">
+              <a href="#"><Share2 size={20} /></a>
+              <a href="#"><Share2 size={20} /></a>
+              <a href="#"><Share2 size={20} /></a>
+              <a href="#"><Share2 size={20} /></a>
+            </div>
+          </div>
+
+          <div className="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#destinations">Destinations</a></li>
+              <li><a href="#package">Package</a></li>
+              <li><a href="#about">About Us</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>
+                <MapPin size={18} className="icon" />
+                <span>No 123, Temple Road, Anuradhapura, SL</span>
+              </li>
+              <li>
+                <Phone size={18} className="icon" />
+                <span>071 1105959 / 077 1819201</span>
+              </li>
+              <li>
+                <Mail size={18} className="icon" />
+                <span>safeway55@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe to get the latest tour updates.</p>
+            <div className="newsletter-form">
+              <input type="email" placeholder="Email Address" />
+              <button className="btn-primary">SUBMIT</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>&copy; 2026 Safe Way Journey. All Rights Reserved. Designed for Premium Pilgrimage Tours.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
