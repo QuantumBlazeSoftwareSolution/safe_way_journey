@@ -8,7 +8,10 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <h2 className="logo">Safe Way <span className="gold-text">Journey</span></h2>
+            <div className="logo">
+              <img src="/assets/logo.png" alt="Safe Way Journey Logo" className="logo-img" />
+              <h2 className="logo-text">Safe Way <span className="gold-text">Journey</span></h2>
+            </div>
             <p className="footer-desc">
               Your trusted partner for spiritual pilgrimages and tours in Sri Lanka. 
               We bring you closer to the sacred heritage of our motherland.

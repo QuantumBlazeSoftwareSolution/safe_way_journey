@@ -16,6 +16,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled glass' : ''}`}>
       <div className="container nav-content">
         <div className="logo">
+          <img src="/assets/logo.png" alt="Safe Way Journey Logo" className="logo-img" />
           <span className="logo-text">Safe Way <span className="gold-text">Journey</span></span>
         </div>
         <ul className="nav-links">

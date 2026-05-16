@@ -12,7 +12,23 @@
 }
 
 .footer-brand .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.footer-brand .logo-img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.footer-brand .logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
 }
 
 .footer-desc {
