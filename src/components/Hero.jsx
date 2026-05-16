@@ -1,13 +1,38 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, MapPin, Calendar, Users } from 'lucide-react';
 import './Hero.css';
 
+const sideImages = [
+  { id: 1, src: "/assets/ruwanweli_saya.png", alt: "Ruwanweli Saya" },
+  { id: 2, src: "/assets/jaya_sri_maha_bodhi.png", alt: "Jaya Sri Maha Bodhi" },
+  { id: 3, src: "/assets/jetavanaramaya.png", alt: "Jetavanaramaya" },
+  { id: 4, src: "/assets/abhayagiriya.png", alt: "Abhayagiriya" }
+];
+
 const Hero = () => {
+  const [bgImage, setBgImage] = useState("/assets/hero.png");
+  const [activeId, setActiveId] = useState(null);
+
+  const handleImageClick = (src, id) => {
+    setBgImage(src);
+    setActiveId(id);
+  };
+
   return (
     <section className="hero" id="home">
       <div className="hero-bg">
-        <img src="/assets/hero.png" alt="Anuradhapura" />
+        <AnimatePresence mode="wait">
+          <motion.img 
+            key={bgImage}
+            src={bgImage} 
+            alt="Anuradhapura" 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          />
+        </AnimatePresence>
         <div className="hero-overlay"></div>
       </div>
 
@@ -50,18 +75,15 @@ const Hero = () => {
         </div>
 
         <div className="hero-side-cards">
-          <div className="side-card active">
-            <img src="/assets/ruwanweli_saya.png" alt="Ruwanweli Saya" />
-          </div>
-          <div className="side-card">
-            <img src="/assets/jaya_sri_maha_bodhi.png" alt="Jaya Sri Maha Bodhi" />
-          </div>
-          <div className="side-card">
-            <img src="/assets/jetavanaramaya.png" alt="Jetavanaramaya" />
-          </div>
-          <div className="side-card">
-            <img src="/assets/abhayagiriya.png" alt="Abhayagiriya" />
-          </div>
+          {sideImages.map((image) => (
+            <div 
+              key={image.id}
+              className={`side-card ${activeId === image.id ? 'active' : ''}`}
+              onClick={() => handleImageClick(image.src, image.id)}
+            >
+              <img src={image.src} alt={image.alt} />
+            </div>
+          ))}
         </div>
       </div>
 
