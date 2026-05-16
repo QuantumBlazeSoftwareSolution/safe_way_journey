@@ -1,7 +1,7 @@
 .package-card {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  border-radius: 40px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(0,0,0,0.05);
@@ -17,7 +17,7 @@
   color: var(--primary);
   display: inline-block;
   padding: 0.5rem 1.5rem;
-  border-radius: 50px;
+  border-radius: 8px;
   font-weight: 700;
   font-size: 0.85rem;
   margin-bottom: 1.5rem;
@@ -90,7 +90,7 @@
 .pricing-box {
   background: white;
   padding: 3rem;
-  border-radius: 30px;
+  border-radius: 12px;
   width: 100%;
   text-align: center;
   box-shadow: var(--shadow-md);

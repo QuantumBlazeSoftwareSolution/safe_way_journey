@@ -23,7 +23,7 @@
 .feature-card {
   padding: 3rem 2rem;
   background-color: var(--bg-soft);
-  border-radius: 24px;
+  border-radius: 12px;
   text-align: center;
   transition: var(--transition);
   border: 1px solid transparent;
@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 12px;
   margin: 0 auto 2rem;
   box-shadow: var(--shadow-md);
 }
