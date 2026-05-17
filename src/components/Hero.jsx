@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Search, MapPin, Calendar, Users } from 'lucide-react';
 import './Hero.css';
 
@@ -14,6 +14,16 @@ const Hero = () => {
   const [bgImage, setBgImage] = useState("/assets/hero.png");
   const [activeId, setActiveId] = useState(null);
 
+  // Preload images to ensure instant loading
+  useEffect(() => {
+    sideImages.forEach((image) => {
+      const img = new Image();
+      img.src = image.src;
+    });
+    const mainHero = new Image();
+    mainHero.src = "/assets/hero.png";
+  }, []);
+
   const handleImageClick = (src, id) => {
     setBgImage(src);
     setActiveId(id);
@@ -22,17 +32,12 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-bg">
-        <AnimatePresence mode="wait">
-          <motion.img 
-            key={bgImage}
-            src={bgImage} 
-            alt="Anuradhapura" 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-          />
-        </AnimatePresence>
+        {/* No animation for instant load as requested */}
+        <img 
+          src={bgImage} 
+          alt="Anuradhapura" 
+          className="hero-main-img"
+        />
         <div className="hero-overlay"></div>
       </div>
 
@@ -121,11 +126,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="brush-stroke">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-          <path d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,106.7C960,117,1056,139,1152,138.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#ffffff"></path>
-        </svg>
-      </div>
+      {/* <div className="wave-container">
+        <div className="wave wave1"></div>
+        <div className="wave wave2"></div>
+        <div className="wave wave3"></div>
+        <div className="wave wave4"></div>
+      </div> */}
     </section>
   );
 };
