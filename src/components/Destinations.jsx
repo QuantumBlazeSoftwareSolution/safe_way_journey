@@ -53,9 +53,11 @@ const Destinations = () => {
     <section className="destinations section-padding" id="destinations">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Sacred Destinations</h2>
-          <p className="section-subtitle">Visit the most revered sites in the ancient capital of Anuradhapura.</p>
+          <h2 className="section-title">Sacred <span className="text-gradient">Destinations</span></h2>
+          <p className="section-subtitle">අනුරාධපුර ඓතිහාසික පූජා භූමියේ පිහිටි උතුම්ම වන්දනා ස්ථාන වන්දනාමාන කරගන්න.</p>
         </div>
+
+
 
         <div className="destinations-grid">
           {destinations.map((dest, index) => (

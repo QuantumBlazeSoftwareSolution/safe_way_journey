@@ -60,14 +60,15 @@ const Hero = () => {
             Say Yes to Your <br />
             <span className="text-gradient">Sacred Journey</span>
           </motion.h1>
+
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="hero-description"
           >
-            Experience the serenity of Anuradhapura Atamasthana with our premium 
-            pilgrimage tour. Comfort, safety, and spiritual enrichment guaranteed.
+            අපගේ Premium Pilgrimage Tour එක සමඟින් අනුරාධපුර අටමස්ථානයේ ශාන්ත සුවය අත්විඳින්න. 
+            ඉහළම සුවපහසුව, ආරක්ෂාව සහ වන්දනාමය අත්දැකීමක් සහතික කෙරේ.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -75,8 +76,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="hero-btn-group"
           >
-            <button className="btn-primary">Find Out More</button>
+            <button className="btn-primary">විස්තර සොයන්න / Explore More</button>
           </motion.div>
+
         </div>
 
         <div className="hero-side-cards">

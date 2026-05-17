@@ -13,8 +13,8 @@ const Footer = () => {
               <h2 className="logo-text">Safe Way <span className="gold-text">Journey</span></h2>
             </div>
             <p className="footer-desc">
-              Your trusted partner for spiritual pilgrimages and tours in Sri Lanka. 
-              We bring you closer to the sacred heritage of our motherland.
+              ශ්‍රී ලංකාවේ පූජනීය වන්දනා චාරිකා සහ සංචාර සඳහා ඔබගේ විශ්වාසවන්ත සහකරු. 
+              අපගේ මාතෘ භූමියේ ශ්‍රේෂ්ඨ උරුමයන් කරා ඔබ රැගෙන යන්නෙමු.
             </p>
             <div className="social-links">
               <a href="#"><Share2 size={20} /></a>
@@ -30,12 +30,14 @@ const Footer = () => {
               <li><a href="#home">Home</a></li>
               <li><a href="#destinations">Destinations</a></li>
               <li><a href="#package">Package</a></li>
-              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
 
           <div className="footer-contact">
             <h3>Contact Us</h3>
+
+
             <ul>
               <li>
                 <MapPin size={18} className="icon" />
