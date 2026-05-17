@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import { CheckCircle, ShieldCheck, Zap } from 'lucide-react';
 import './PackageDetails.css';
 

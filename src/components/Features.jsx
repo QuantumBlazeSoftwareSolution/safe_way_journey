@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Bus, Clock, Utensils, Hotel } from 'lucide-react';
 import './Features.css';
