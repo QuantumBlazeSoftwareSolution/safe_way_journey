@@ -8,43 +8,43 @@ const destinations = [
     name: "Ruwanweli Saya",
     sinhala: "රුවන්වැලි සෑය",
     image: "/assets/ruwanweli_saya.png",
-    description: "The Great Stupa, a marvel of ancient engineering and a symbol of faith."
+    description: "පුරාණ ලංකාවේ ඉංජිනේරු විද්‍යාවේ විශිෂ්ඨතම මහා ස්තූපය සහ අසිරිමත් බෞද්ධ උරුමය."
   },
   {
     name: "Jaya Sri Maha Bodhi",
     sinhala: "ජය ශ්‍රී මහා බෝධිය",
     image: "/assets/jaya_sri_maha_bodhi.png",
-    description: "The oldest living human-planted tree in the world with over 2,300 years of history."
+    description: "ලොව පැරණිතම ලිඛිත ඉතිහාසයක් ඇති, වසර 2,300කට වඩා පැරණි උතුම්ම ජය ශ්‍රී මහා බෝධීන් වහන්සේ."
   },
   {
     name: "Jetavanaramaya",
     sinhala: "ජේතවනාරාමය",
     image: "/assets/jetavanaramaya.png",
-    description: "Once the third tallest structure in the ancient world, built with over 90 million bricks."
+    description: "පුරාණ ලෝකයේ ඉදිකළ තෙවැනි උසම ගොඩනැගිල්ල වන ගඩොල් මිලියන 90කින් නිමවූ මහා ස්තූපය."
   },
   {
     name: "Abhayagiriya",
     sinhala: "අභයගිරිය",
     image: "/assets/abhayagiriya.png",
-    description: "A major monastery site and one of the most extensive ruins in the world."
+    description: "අතීතයේ ලොව විශාලතම ආගමික මධ්‍යස්ථානයක් මෙන්ම ඓතිහාසික මහා විහාර සංකීර්ණයක්."
   },
   {
     name: "Thuparamaya",
     sinhala: "තූපාරාමය",
     image: "/assets/thuparamaya.png",
-    description: "The first Buddhist stupa built in Sri Lanka after the introduction of Buddhism."
+    description: "මහින්දාගමනයෙන් පසු ලක්දිව ප්‍රථමයෙන්ම ඉදිකළ ඓතිහාසික ප්‍රථම බෞද්ධ ස්තූපය."
   },
   {
     name: "Samadhi Statue",
     sinhala: "සමාධි පිලිමය",
     image: "/assets/samadhi_statue.png",
-    description: "A masterpiece of sculpture depicting Lord Buddha in the Dhyana Mudra."
+    description: "සමාධි සුවයෙන් වැඩසිටින බුදුරජාණන් වහන්සේ නිරූපණය කරන ලක්දිව විශිෂ්ඨතම පිළිම නෙලීමේ කලාව."
   },
   {
     name: "Kuttam Pokuna",
     sinhala: "කුට්ටම් පොකුණ",
     image: "/assets/kuttam_pokuna.png",
-    description: "The Twin Ponds, a magnificent example of ancient landscape architecture."
+    description: "පුරාණ ලංකාවේ විශිෂ්ඨ ජල තාක්ෂණය සහ ගෘහ නිර්මාණ ශිල්පය මනාව පෙන්වන නිවුන් පොකුණ."
   }
 ];
 
