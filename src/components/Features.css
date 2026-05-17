@@ -58,3 +58,15 @@
   color: var(--text-muted);
   font-size: 0.95rem;
 }
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  .feature-card {
+    padding: 2rem 1.5rem;
+  }
+}

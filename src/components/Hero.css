@@ -159,59 +159,7 @@
   background-color: var(--primary-light);
 }
 
-/* 
-.wave-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  z-index: 5;
-  pointer-events: none;
-}
 
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23ffffff'/%3E%3C/svg%3E");
-  background-position: 0 bottom;
-  background-repeat: repeat-x;
-  transform-origin: center bottom;
-}
-
-.wave1 {
-  opacity: 0.3;
-  animation: move_wave 20s linear infinite;
-}
-
-.wave2 {
-  opacity: 0.5;
-  animation: move_wave 15s linear infinite;
-  bottom: 5px;
-}
-
-.wave3 {
-  opacity: 0.2;
-  animation: move_wave 25s linear infinite;
-  bottom: 10px;
-}
-
-.wave4 {
-  opacity: 1;
-  animation: move_wave 10s linear infinite;
-  bottom: -2px;
-}
-
-@keyframes move_wave {
-  0% { transform: translateX(0) translateZ(0) scaleY(1); }
-  50% { transform: translateX(-25%) translateZ(0) scaleY(0.8); }
-  100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
-}
-*/
 
 @media (max-width: 1200px) {
   .hero-title {
@@ -220,6 +168,13 @@
 }
 
 @media (max-width: 992px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 0 80px;
+    flex-direction: column;
+    justify-content: center;
+  }
   .hero-container {
     flex-direction: column;
     text-align: center;
@@ -228,19 +183,59 @@
   .hero-content {
     margin-bottom: 3rem;
   }
+  .hero-btn-group {
+    justify-content: center;
+  }
   .hero-side-cards {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .side-card {
+    width: 100px;
+    height: 65px;
+  }
+  .hero-search-bar-container {
+    position: relative;
+    bottom: auto;
+    margin-top: 3rem;
+    width: 100%;
   }
   .hero-search-bar {
     flex-direction: column;
     border-radius: 24px;
     padding: 2rem;
-    bottom: 20px;
+    gap: 1.5rem;
+  }
+  .search-item {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5rem;
   }
   .search-divider {
     display: none;
   }
+  .search-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
   .hero-search-bar-container {
-    bottom: 120px;
+    display: none;
   }
 }

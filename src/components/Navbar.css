@@ -85,3 +85,23 @@
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+  .logo-img {
+    height: 35px;
+    width: 35px;
+  }
+  .btn-login {
+    display: none;
+  }
+  .nav-actions .btn-primary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  .container.nav-content {
+    padding: 0 1rem;
+  }
+}

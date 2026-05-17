@@ -95,3 +95,12 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .section-padding {
+    padding: 3rem 0;
+  }
+}

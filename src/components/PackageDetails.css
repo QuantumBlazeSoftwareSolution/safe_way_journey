@@ -166,14 +166,34 @@
   }
 }
 
+@media (max-width: 992px) {
+  .package-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .stat-item {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
-  .package-content, .package-pricing {
-    padding: 2rem;
+  .package-content {
+    padding: 2rem 1.5rem;
+  }
+  .package-pricing {
+    padding: 2rem 1.5rem;
   }
   .inclusions-list {
     grid-template-columns: 1fr;
   }
   .package-title {
     font-size: 2rem;
+  }
+  .amount {
+    font-size: 3rem;
+  }
+  .pricing-box {
+    padding: 2rem 1.5rem;
   }
 }
