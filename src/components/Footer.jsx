@@ -52,18 +52,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-newsletter">
-            <h3>Newsletter</h3>
-            <p>Subscribe to get the latest tour updates.</p>
-            <div className="newsletter-form">
-              <input type="email" placeholder="Email Address" />
-              <button className="btn-primary">SUBMIT</button>
-            </div>
-          </div>
         </div>
 
         <div className="footer-bottom">
           <p>&copy; 2026 Safe Way Journey. All Rights Reserved. Designed for Premium Pilgrimage Tours.</p>
+          <div className="developer-credits">
+            <p>Developed by <a href="https://quantumblaze.lk" target="_blank" rel="noopener noreferrer" className="dev-link">Quantum Blaze</a></p>
+            <p className="dev-contact">Contact: <a href="tel:+94788056838">+94 78 805 6838</a> | Website: <a href="https://quantumblaze.lk" target="_blank" rel="noopener noreferrer">quantumblaze.lk</a></p>
+          </div>
         </div>
       </div>
     </footer>
