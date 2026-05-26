@@ -43,22 +43,13 @@ const Hero = () => {
 
       <div className="container hero-container">
         <div className="hero-content">
-          <motion.h4 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="hero-subtitle"
-          >
-            සිරි සදහම් වන්දනා
-          </motion.h4>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
             className="hero-title"
           >
-            Say Yes to Your <br />
-            <span className="text-gradient">Sacred Journey</span>
+            සිරි සදහම් වන්දනා
           </motion.h1>
 
           <motion.p 

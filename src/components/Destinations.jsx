@@ -53,7 +53,7 @@ const Destinations = () => {
     <section className="destinations section-padding" id="destinations">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Sacred <span className="text-gradient">Destinations</span></h2>
+          <h2 className="section-title">ඓතිහාසික <span className="text-gradient">සිද්ධස්ථාන</span></h2>
           <p className="section-subtitle">අනුරාධපුර ඓතිහාසික පූජා භූමියේ පිහිටි උතුම්ම වන්දනා ස්ථාන වන්දනාමාන කරගන්න.</p>
         </div>
 
@@ -71,6 +71,10 @@ const Destinations = () => {
             >
               <div className="dest-image">
                 <img src={dest.image} alt={dest.name} />
+                <div className="dest-card-label">
+                  <span className="label-sinhala">{dest.sinhala}</span>
+                  <h4 className="label-english">{dest.name}</h4>
+                </div>
                 <div className="dest-overlay">
                   <div className="dest-info">
                     <span className="sinhala-text">{dest.sinhala}</span>

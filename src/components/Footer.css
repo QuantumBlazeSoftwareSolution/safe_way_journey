@@ -120,13 +120,13 @@
 }
 
 .developer-credits a {
-  color: var(--secondary);
+  color: #aaa;
   font-weight: 600;
   transition: var(--transition);
 }
 
 .developer-credits a:hover {
-  color: var(--primary-light);
+  color: white;
   text-decoration: underline;
 }
 

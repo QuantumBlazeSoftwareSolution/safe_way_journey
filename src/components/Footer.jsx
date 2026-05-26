@@ -1,5 +1,5 @@
 
-import { Share2, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -10,18 +10,12 @@ const Footer = () => {
           <div className="footer-brand">
             <div className="logo">
               <img src="/assets/logo.png" alt="Safe Way Journey Logo" className="logo-img" />
-              <h2 className="logo-text">Safe Way <span className="gold-text">Journey</span></h2>
+              <h2 className="logo-text">Safe Way Journey</h2>
             </div>
             <p className="footer-desc">
               ශ්‍රී ලංකාවේ පූජනීය වන්දනා චාරිකා සහ සංචාර සඳහා ඔබගේ විශ්වාසවන්ත සහකරු. 
               අපගේ මාතෘ භූමියේ ශ්‍රේෂ්ඨ උරුමයන් කරා ඔබ රැගෙන යන්නෙමු.
             </p>
-            <div className="social-links">
-              <a href="#"><Share2 size={20} /></a>
-              <a href="#"><Share2 size={20} /></a>
-              <a href="#"><Share2 size={20} /></a>
-              <a href="#"><Share2 size={20} /></a>
-            </div>
           </div>
 
           <div className="footer-links">
@@ -39,10 +33,6 @@ const Footer = () => {
 
 
             <ul>
-              <li>
-                <MapPin size={18} className="icon" />
-                <span>No 123, Temple Road, Anuradhapura, SL</span>
-              </li>
               <li>
                 <Phone size={18} className="icon" />
                 <span>071 1105959 / 077 1819201</span>

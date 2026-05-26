@@ -99,7 +99,42 @@
   opacity: 0.8;
 }
 
+.dest-card-label {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: white;
+  z-index: 5;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dest-card-label .label-sinhala {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.dest-card-label .label-english {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.dest-card:hover .dest-card-label {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
 @media (max-width: 768px) {
+  .dest-card-label {
+    display: none;
+  }
+
   .destinations-grid {
     grid-template-columns: 1fr;
     gap: 2rem;

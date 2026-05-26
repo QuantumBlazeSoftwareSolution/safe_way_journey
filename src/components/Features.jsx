@@ -32,7 +32,7 @@ const Features = () => {
     <section className="features section-padding">
       <div className="container">
         <div className="section-header text-center">
-          <h2 className="section-title">අපගේ Premium සේවාවන්</h2>
+          <h2 className="section-title">අපගේ විශේෂ සේවාවන්</h2>
           <p className="section-subtitle">ඔබේ වන්දනා චාරිකාවේ සෑම විස්තරයක්ම ඉහළම ගුණාත්මකභාවයෙන් යුතුව සංවිධානය කිරීමට අප බැඳී සිටිමු.</p>
         </div>
 

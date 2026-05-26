@@ -25,7 +25,8 @@
 }
 
 .package-title {
-  font-size: 3rem;
+  font-size: 2.2rem;
+  line-height: 1.4;
   margin-bottom: 1.5rem;
 }
 
@@ -188,7 +189,8 @@
     grid-template-columns: 1fr;
   }
   .package-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.3;
   }
   .amount {
     font-size: 3rem;
@@ -196,4 +198,78 @@
   .pricing-box {
     padding: 2rem 1.5rem;
   }
+}
+
+.voice-player-container {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  background: var(--bg-soft);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 128, 128, 0.08);
+  text-align: left;
+}
+
+.voice-player-title {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  margin-bottom: 0.8rem;
+  font-family: 'Noto Sans Sinhala', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.voice-player {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.voice-play-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.2);
+  flex-shrink: 0;
+}
+
+.voice-play-btn:hover {
+  background: var(--primary-light);
+  transform: scale(1.08);
+}
+
+.voice-waveform {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 50px;
+  cursor: pointer;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.wave-bar {
+  width: 4px;
+  background-color: rgba(0, 128, 128, 0.12);
+  border-radius: 4px;
+  transition: background-color 0.1s ease;
+}
+
+.wave-bar.active {
+  background-color: var(--primary);
+}
+
+.voice-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  font-family: monospace;
 }
