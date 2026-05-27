@@ -5,12 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audio] = useState(() => {
-    const aud = new Audio("/audio/safe-way-journey-audio-clip.mp3");
-    aud.loop = true;
-    aud.currentTime = 3; // Start from 3 seconds
-    return aud;
-  });
+  const [audio] = useState(() => new Audio());
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +16,25 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    import('hls.js').then(({ default: Hls }) => {
+      const audioUrl = "/audio/hls/playlist.m3u8";
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(audioUrl);
+        hls.attachMedia(audio);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          audio.currentTime = 3;
+        });
+      } else if (audio.canPlayType('application/vnd.apple.mpegurl')) {
+        audio.src = audioUrl;
+        audio.addEventListener('loadedmetadata', () => {
+          audio.currentTime = 3;
+        });
+      }
+    });
+
+    audio.loop = true;
+
     return () => {
       audio.pause();
     };

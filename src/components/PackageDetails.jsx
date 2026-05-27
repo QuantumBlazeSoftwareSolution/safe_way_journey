@@ -33,9 +33,8 @@ const PackageDetails = () => {
   ]; // 30 bars representing the waveform
 
   useEffect(() => {
-    audioRef.current = new Audio("/audio/safe-way-journey-audio-clip.mp3");
-    const audio = audioRef.current;
-    audio.currentTime = 3; // Start from 3 seconds
+    const audio = new Audio();
+    audioRef.current = audio;
 
     const handleTimeUpdate = () => {
       setCurrentTime(audio.currentTime);
@@ -55,15 +54,40 @@ const PackageDetails = () => {
     audio.addEventListener('loadedmetadata', handleLoadedMetadata);
     audio.addEventListener('ended', handleEnded);
 
-    if (audio.duration) {
-      setDuration(audio.duration);
-    }
+    let hlsInstance = null;
+    import('hls.js').then(({ default: Hls }) => {
+      const audioUrl = "/audio/hls/playlist.m3u8";
+      if (Hls.isSupported()) {
+        hlsInstance = new Hls();
+        hlsInstance.loadSource(audioUrl);
+        hlsInstance.attachMedia(audio);
+        hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => {
+          audio.currentTime = 3;
+          setCurrentTime(3);
+          // Set duration once parsed if available
+          setDuration(audio.duration || 0);
+        });
+        hlsInstance.on(Hls.Events.LEVEL_LOADED, (event, data) => {
+          setDuration(data.details.totalduration || 0);
+        });
+      } else if (audio.canPlayType('application/vnd.apple.mpegurl')) {
+        audio.src = audioUrl;
+        audio.addEventListener('loadedmetadata', () => {
+          audio.currentTime = 3;
+          setCurrentTime(3);
+          setDuration(audio.duration || 0);
+        });
+      }
+    });
 
     return () => {
       audio.pause();
       audio.removeEventListener('timeupdate', handleTimeUpdate);
       audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
       audio.removeEventListener('ended', handleEnded);
+      if (hlsInstance) {
+        hlsInstance.destroy();
+      }
     };
   }, []);
 
