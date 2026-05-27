@@ -21,7 +21,7 @@ const PackageDetails = () => {
   };
 
   const [isVoicePlaying, setIsVoicePlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
+  const [currentTime, setCurrentTime] = useState(3);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef(null);
   const waveformRef = useRef(null);
@@ -35,6 +35,7 @@ const PackageDetails = () => {
   useEffect(() => {
     audioRef.current = new Audio("/audio/safe-way-journey-audio-clip.mp3");
     const audio = audioRef.current;
+    audio.currentTime = 3; // Start from 3 seconds
 
     const handleTimeUpdate = () => {
       setCurrentTime(audio.currentTime);
@@ -46,7 +47,8 @@ const PackageDetails = () => {
 
     const handleEnded = () => {
       setIsVoicePlaying(false);
-      setCurrentTime(0);
+      audio.currentTime = 3; // Reset to 3 seconds
+      setCurrentTime(3);
     };
 
     audio.addEventListener('timeupdate', handleTimeUpdate);

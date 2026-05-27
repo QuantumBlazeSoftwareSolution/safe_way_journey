@@ -8,6 +8,7 @@ const Navbar = () => {
   const [audio] = useState(() => {
     const aud = new Audio("/audio/safe-way-journey-audio-clip.mp3");
     aud.loop = true;
+    aud.currentTime = 3; // Start from 3 seconds
     return aud;
   });
 
